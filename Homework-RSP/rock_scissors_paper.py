@@ -14,17 +14,18 @@ if player_select not in choice:
     exit()
 
 if player_select == computer_select:
+
     print("Draw!")
     print("Thanks for the game!")
 
-if ((player_select == "rock" and computer_select == "scissors") or
-    (player_select == "paper" and computer_select == "rock") or
-        (player_select == "scissors" and computer_select == "paper")):
+elif ((player_select == "rock" and computer_select == "scissors")
+      or (player_select == "paper" and computer_select == "rock")
+      or (player_select == "scissors" and computer_select == "paper")):
+
     print("Congratulations!You win!")
     print("Thanks for the game!")
 
-elif ((player_select == "rock" and computer_select == "paper") or
-      (player_select == "paper" and computer_select == "scissors") or
-      (player_select == "scissors" and computer_select == "rock")):
+else:
+
     print("The computer wins!")
     print("Thanks for the game!")
