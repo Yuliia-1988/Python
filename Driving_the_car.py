@@ -1,7 +1,7 @@
 import random
 
 class Car:
-    def __init__(self, model, color: str, economy: int, mileage: int = 0, fuel: int = 100,):
+    def __init__(self, model, color: str, economy: int, mileage: int = 0, fuel: int = 100):
         self.mileage = mileage
         self.fuel = fuel
         self.model = model
@@ -11,7 +11,7 @@ class Car:
     def set_drive(self, distance):
         required_fuel = (distance / 100) * self.economy
         if required_fuel > self.fuel:
-            print(f"Error:Need more fuel to cover the distance. Please, fill more! {distance}")
+            raise Exception("Need more fuel to cover the distance. Please, fill more!")
 
         else:
             self.fuel -= required_fuel
